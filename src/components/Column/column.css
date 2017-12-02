@@ -1,7 +1,9 @@
 .column{
-	background-color: #14C4ED;
+
 	color: black;
 	text-align: center;
+	height: 93vh;
+	padding: 0;
 }
 
 .inbox{
