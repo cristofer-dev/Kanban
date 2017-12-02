@@ -1,0 +1,21 @@
+.column{
+
+	color: black;
+	text-align: center;
+	height: 93vh;
+	padding: 0;
+}
+
+.inbox{
+	background-color: blue
+}
+
+.inprogress{
+	background-color: yellow
+}
+.terminate{
+	background-color: green
+}
+.history{
+	background-color: purple
+}
