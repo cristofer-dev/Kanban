@@ -5,15 +5,15 @@
 }
 
 .inbox{
-	background-color: blue
+	background-color: blue;
 }
 
 .inprogress{
-	background-color: yellow
+	background-color: yellow;
 }
 .terminate{
-	background-color: green
+	background-color: green;
 }
 .history{
-	background-color: purple
+	background-color: purple;
 }
