@@ -2,18 +2,19 @@
 	background-color: #64B5F6;
 	font-size: 2.5vh;
 	text-transform: capitalize;
+	color: white;
 }
 
 .inbox{
-	background-color: blue;
+	background-color: #00AAFF;
 }
 
 .inprogress{
-	background-color: yellow;
+	background-color: #FFD500;
 }
 .terminate{
-	background-color: green;
+	background-color: #8ACC47;
 }
 .history{
-	background-color: purple;
+	background-color: #98AAB3;
 }
