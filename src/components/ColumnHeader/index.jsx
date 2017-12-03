@@ -8,7 +8,7 @@ class ColumnHeader extends Component {
 	
 	render() {
 		return (
-			<div className={`col-md-12 ${styles.columnHeader} `}>      
+			<div className={`col-md-12 ${styles[this.props.action]} ${styles.columnHeader} `}>      
 			  {this.props.action}
 			</div>
 		);
