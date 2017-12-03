@@ -9,6 +9,7 @@ class ColumnHeader extends Component {
 	render() {
 		return (
 			<div className={`col-md-12 ${styles[this.props.action]} ${styles.columnHeader} `}>      
+			  <i className={`fa fa-${this.props.icon}`} aria-hidden="true"></i>
 			  {this.props.action}
 			</div>
 		);
