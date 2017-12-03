@@ -3,13 +3,7 @@ import styles from './column.css'
 import ColumnHeader from '../ColumnHeader'
 import ColumnBody from '../ColumnBody'
 
-class Column extends Component {
-  constructor (){
-    super()
-
-
-  }
-  
+class Column extends Component {  
   render() {
     return (
       <div className={`sinpadding col-md-3 ${styles.column} `}>      
