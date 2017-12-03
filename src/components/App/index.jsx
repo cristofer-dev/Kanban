@@ -17,10 +17,10 @@ class App extends Component {
             <Header />
           </div>
           <div className="row">
-            <Column action="inbox" />
-            <Column action="inprogress" />
-            <Column action="terminate" />
-            <Column action="history" />
+            <Column action="inbox" bgColor="gray_1"/>
+            <Column action="inprogress" bgColor="gray_2"/>
+            <Column action="terminate" bgColor="gray_1"/>
+            <Column action="history" bgColor="gray_2"/>
             
           </div>
         </div>

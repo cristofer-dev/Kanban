@@ -6,10 +6,10 @@ import ColumnBody from '../ColumnBody'
 class Column extends Component {  
   render() {
     return (
-      <div className={`sinpadding col-md-3 ${styles.column} `}>      
+      <div className={`sinpadding col-md-3 ${styles.column} `}>
         
         <ColumnHeader action={this.props.action}/>
-        <ColumnBody />
+        <ColumnBody bgColor={this.props.bgColor}/>
 
       </div>
     )
