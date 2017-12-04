@@ -1,0 +1,24 @@
+.columnHeader{
+	background-color: #64B5F6;
+	font-size: 2.5vh;
+	text-transform: capitalize;
+	color: white;
+}
+
+.inbox{
+	background-color: #00AAFF;
+}
+
+.inprogress{
+	background-color: #FFD500;
+}
+.terminate{
+	background-color: #8ACC47;
+}
+.history{
+	background-color: #98AAB3;
+}
+
+i{
+	margin-right: 10px;
+}

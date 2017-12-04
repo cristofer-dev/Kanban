@@ -1,0 +1,40 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "description": "App dummy para practicar react",
+  "main": "build/app.js",
+  "scripts": {
+    "build": "webpack --colors",
+    "serve": "webpack-dev-server --content-base build --color --progress",
+    "start": "npm run build && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cristofer-dev/Kanban.git"
+  },
+  "author": "Cristofer-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristofer-dev/Kanban/issues"
+  },
+  "homepage": "https://github.com/cristofer-dev/Kanban#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "moment": "^2.19.2",
+    "normalize-css": "^2.3.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "uuid": "^3.1.0"
+  }
+}
