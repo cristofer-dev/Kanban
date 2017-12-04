@@ -9,7 +9,6 @@ class Column extends Component {
       <div className={`sinpadding col-md-3 ${styles.column} `}>
         <ColumnHeader action={this.props.action} icon={this.props.icon}/>
         <ColumnBody bgColor={this.props.bgColor} />
-
       </div>
     )
   }
