@@ -15,7 +15,7 @@ class ColumnHeader extends Component {
 			</div>
 			<div className={`col`}>
 				
-				<i className={`rounded-circle fa fa-plus ${styles.plus}`} aria-hidden="true"></i>
+				<i onClick={this.props.onOpenText} className={`rounded-circle fa fa-plus ${styles.plus}`} aria-hidden="true"></i>
 				
 			</div>
 			</div>
