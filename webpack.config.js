@@ -3,9 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path');
 
+const cssModules = 'modules&importLoaders=1&LocalIdentName=[name]__[local]__[hash:base64:5]';
+const extractCSS = new ExtractTextPlugin('stylesheets/[name]-one.css');
+
 var t = path.resolve(__dirname)
 
-cssModules = 'modules&importLoaders=1&LocalIdentName=[name]__[local]__[hash:base64:5]'
+
 module.exports = {
 	resolve: {
 		extensions: ['.js','.jsx']
@@ -21,7 +24,12 @@ module.exports = {
 	module: {
 		loaders:[
 			{ test: /(\.js|jsx)$/, exclude: /node_modules/, loaders: ['babel-loader'] },
-			{ test: /\.css$/, loader: `style-loader!css-loader?${cssModules}` }
+			{
+				test: /\.css$/, loader: extractCSS.extract({
+					fallback: 'style-loader',
+					use: [`css-loader?${cssModules}`],
+				})
+			}
 		]
 	},
 
@@ -33,6 +41,6 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({ template: './src/assets/index.html' }),
-		new ExtractTextPlugin({ filename: 'style.css',   allChunks: true })
+		extractCSS
 	]
 }
