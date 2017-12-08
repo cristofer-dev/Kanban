@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
+import './assets/test.css'
 
 import App from './components/App'
 
