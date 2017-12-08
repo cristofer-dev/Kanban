@@ -8,9 +8,16 @@ class ColumnHeader extends Component {
 	
 	render() {
 		return (
-			<div className={`col-md-12 ${styles[this.props.action]} ${styles.columnHeader} `}>      
+			<div>
+			<div className={`col ${styles[this.props.action]} ${styles.columnHeader} ${styles.flexcontainer}`}>      
 			  <i className={`fa fa-${this.props.icon}`} aria-hidden="true"></i>
 			  {this.props.action}
+			</div>
+			<div className={`col`}>
+				
+				<i onClick={this.props.onOpenText} className={`rounded-circle fa fa-plus ${styles.plus}`} aria-hidden="true"></i>
+				
+			</div>
 			</div>
 		);
 	}

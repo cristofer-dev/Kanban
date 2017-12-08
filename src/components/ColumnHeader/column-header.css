@@ -3,7 +3,11 @@
 	font-size: 2.5vh;
 	text-transform: capitalize;
 	color: white;
+	font-family: "Roboto";
+	font-weight: 300;
 }
+
+
 
 .inbox{
 	background-color: #00AAFF;
@@ -21,4 +25,13 @@
 
 i{
 	margin-right: 10px;
+	/*margin-left: 10px;*/
+}
+
+
+.plus{
+	color: #EDF1F3;
+	background-color: white;
+	padding: 3px;
+	margin-top: 5px;
 }
