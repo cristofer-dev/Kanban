@@ -5,7 +5,7 @@ const path = require('path');
 
 const cssModules = 'modules&importLoaders=1&LocalIdentName=[name]__[local]__[hash:base64:5]';
 const extractCSS = new ExtractTextPlugin('stylesheets/[name]-one.css');
-
+const extractVendorCSS = new ExtractTextPlugin('stylesheets/vendors.css');
 var t = path.resolve(__dirname)
 
 
@@ -25,9 +25,22 @@ module.exports = {
 		loaders:[
 			{ test: /(\.js|jsx)$/, exclude: /node_modules/, loaders: ['babel-loader'] },
 			{
-				test: /\.css$/, loader: extractCSS.extract({
+				test: /\.css$/, 
+				include: [
+					path.resolve(__dirname, 'src/components'),
+				],
+				loader: extractCSS.extract({
 					fallback: 'style-loader',
 					use: [`css-loader?${cssModules}`],
+				})
+			},
+			{
+				test: /\.css$/,
+				include: [
+					path.resolve(__dirname, 'src/assets/css'),
+				],
+				loader: extractVendorCSS.extract({
+					use: ['css-loader'],
 				})
 			}
 		]
@@ -41,6 +54,7 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({ template: './src/assets/index.html' }),
+		extractVendorCSS,
 		extractCSS
 	]
 }
