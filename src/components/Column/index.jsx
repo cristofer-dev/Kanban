@@ -17,7 +17,8 @@ class Column extends Component {
 
   handleOpenText (event){
       event.preventDefault()
-      this.setState({ OpenText : true })
+      this.setState({ OpenText : !this.state.OpenText })
+
   }
 
   renderOpenText (){
