@@ -17,11 +17,8 @@ class Column extends Component {
 
   handleOpenText (event){
       event.preventDefault()
-      if(this.state.OpenText){
-        this.setState({ OpenText : false })
-      }else{
-        this.setState({ OpenText : true })
-      }
+      this.setState({ OpenText : !this.state.OpenText })
+
   }
 
   renderOpenText (){
