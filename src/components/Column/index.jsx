@@ -6,13 +6,16 @@ import NewTask from '../NewTask'
 
 class Column extends Component {  
 
-  constructor () {
-      super()
+  constructor (props) {
+
+      super(props)
       this.state = {
           OpenText : false
       }
 
       this.handleOpenText = this.handleOpenText.bind(this)
+
+      // console.log(this.props.tasks)
   }
 
   handleOpenText (event){
@@ -39,7 +42,7 @@ class Column extends Component {
         <div className={`col-md-12`}>
           {this.renderOpenText()}
         </div>
-        <ColumnBody bgColor={this.props.bgColor} />
+        <ColumnBody tasks={this.props.tasks} bgColor={this.props.bgColor} />
       </div>
     )
   }
