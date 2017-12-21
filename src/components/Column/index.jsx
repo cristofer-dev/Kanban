@@ -3,28 +3,44 @@ import styles from './column.css'
 import ColumnHeader from '../ColumnHeader'
 import ColumnBody from '../ColumnBody'
 import NewTask from '../NewTask'
+import uuid from 'uuid'
 
 class Column extends Component {  
 
-  constructor () {
-      super()
+  constructor (props) {
+      super(props)
       this.state = {
-          OpenText : false
+          OpenText : false,
+          tasks: this.props.tasks
       }
 
       this.handleOpenText = this.handleOpenText.bind(this)
+      this.addNewTask = this.addNewTask.bind(this)
   }
 
   handleOpenText (event){
       event.preventDefault()
       this.setState({ OpenText : !this.state.OpenText })
+  }
 
+  addNewTask (event) {
+    event.preventDefault()
+
+    let newTask = {
+      id: uuid.v4(),
+      text: event.target.text.value
+    }
+
+    this.setState({
+      tasks : this.state.tasks.concat([newTask])
+    })
   }
 
   renderOpenText (){
       if ( this.state.OpenText ) {
-        console.log("Ok")
-          return <NewTask/>
+          return <NewTask
+            addNewTask={this.addNewTask}
+          />
       }
   }
 
@@ -39,7 +55,7 @@ class Column extends Component {
         <div className={`col-md-12`}>
           {this.renderOpenText()}
         </div>
-        <ColumnBody bgColor={this.props.bgColor} />
+        <ColumnBody tasks={this.state.tasks} bgColor={this.props.bgColor} />
       </div>
     )
   }

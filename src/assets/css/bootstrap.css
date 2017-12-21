@@ -9731,7 +9731,7 @@ input[type=number]:not(textarea),
 [type=email].form-control:not(textarea),
 [type=tel].form-control:not(textarea),
 [contenteditable].form-control:not(textarea) {
-  height: calc(3.21875rem + 2px);
+  /*height: calc(3.21875rem + 2px);*/
 }
 
 textarea.form-control-sm, .input-group-sm > textarea.form-control,
