@@ -4,11 +4,9 @@ import styles from './task.css'
 class Task extends Component {
 	constructor (props) {
 		super(props)
-		// console.log(this.props.tasks)
 	}
 
 	render() {
-		console.log(this.props.text);
 		return (
 			<div className={`rounded ${styles.hvrFloatShadow} ${styles.task} `}>
 			{this.props.text}

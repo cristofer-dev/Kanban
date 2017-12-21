@@ -17,68 +17,68 @@ class App extends Component {
           {
             id: uuid.v4(),
             text: 'Task 01',
-            asigned: 'Mey'
+            assigned: 'Mey'
           },
           {
             id: uuid.v4(),
             text: 'Task 02',
-            asigned: 'Mikao'
+            assigned: 'Mikao'
           },
           {
             id: uuid.v4(),
             text: 'Task 03',
-            asigned: 'Kengi'
+            assigned: 'Kengi'
           }
         ],
-        inprogress:[
+        inProgress:[
           {
             id: uuid.v4(),
             text: 'Task 04',
-            asigned: 'Mey'
+            assigned: 'Mey'
           },
           {
             id: uuid.v4(),
             text: 'Task 05',
-            asigned: 'Mikao'
+            assigned: 'Mikao'
           },
           {
             id: uuid.v4(),
             text: 'Task 06',
-            asigned: 'Kengi'
+            assigned: 'Kengi'
           }
         ],
         terminate:[
           {
             id: uuid.v4(),
             text: 'Task 07',
-            asigned: 'Mey'
+            assigned: 'Mey'
           },
           {
             id: uuid.v4(),
             text: 'Task 08',
-            asigned: 'Mikao'
+            assigned: 'Mikao'
           },
           {
             id: uuid.v4(),
             text: 'Task 09',
-            asigned: 'Kengi'
+            assigned: 'Kengi'
           }
         ],
         history:[
           {
             id: uuid.v4(),
             text: 'Task 99',
-            asigned: 'Mey'
+            assigned: 'Mey'
           },
           {
             id: uuid.v4(),
             text: 'Task 100',
-            asigned: 'Mikao'
+            assigned: 'Mikao'
           },
           {
             id: uuid.v4(),
             text: 'Task 101',
-            asigned: 'Kengi'
+            assigned: 'Kengi'
           }
         ]
       }
@@ -95,7 +95,7 @@ class App extends Component {
           </div>
           <div className="row">
             <Column action="inbox" tasks={this.state.tasks.inbox} bgColor="gray_1" icon="inbox"/>
-            <Column action="inprogress" tasks={this.state.tasks.inprogress} bgColor="gray_2" icon="cogs"/>
+            <Column action="inprogress" tasks={this.state.tasks.inProgress} bgColor="gray_2" icon="cogs"/>
             <Column action="terminate" tasks={this.state.tasks.terminate} bgColor="gray_1" icon="check"/>
             <Column action="history" tasks={this.state.tasks.history} bgColor="gray_2" icon="comments"/>
             

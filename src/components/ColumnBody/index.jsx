@@ -7,7 +7,6 @@ class ColumnBody extends Component {
 
 	constructor (props) {
 		super(props)
-		console.log(this.props.tasks)
 	}
 
 	render() {
@@ -18,7 +17,7 @@ class ColumnBody extends Component {
 						<Task 
 							key={task.id}
 							text={task.text}
-							asigned={task.asigned}
+							assigned={task.assigned}
 						/>
 					)
 				} )}
