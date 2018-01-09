@@ -32,7 +32,8 @@ class Column extends Component {
     }
 
     this.setState({
-      tasks : this.state.tasks.concat([newTask])
+      tasks : this.state.tasks.concat([newTask]),
+      OpenText : false,
     })
   }
 
