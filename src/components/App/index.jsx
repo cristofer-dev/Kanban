@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import uuid from 'uuid'
+import { Link, Route, Switch } from 'react-router-dom';
 
 import 'normalize-css'
 import styles from './app.css'
 
 import Column from '../Column'
 import Header from '../Header'
+import Profile from '../Profile'
 
 class App extends Component {
 
@@ -88,18 +90,25 @@ class App extends Component {
   render() {
     return (
       <div>
+
         
         <div className="container">
           <div className="row">
             <Header />
           </div>
-          <div className="row">
-            <Column action="inbox" tasks={this.state.tasks.inbox} bgColor="gray_1" icon="inbox"/>
-            <Column action="inprogress" tasks={this.state.tasks.inProgress} bgColor="gray_2" icon="cogs"/>
-            <Column action="terminate" tasks={this.state.tasks.terminate} bgColor="gray_1" icon="check"/>
-            <Column action="history" tasks={this.state.tasks.history} bgColor="gray_2" icon="comments"/>
-            
-          </div>
+          <Route
+            exact path="/"
+            render={() => (
+              <div className="row">
+                <Column action="inbox" tasks={this.state.tasks.inbox} bgColor="gray_1" icon="inbox"/>
+                <Column action="inprogress" tasks={this.state.tasks.inProgress} bgColor="gray_2" icon="cogs"/>
+                <Column action="terminate" tasks={this.state.tasks.terminate} bgColor="gray_1" icon="check"/>
+                <Column action="history" tasks={this.state.tasks.history} bgColor="gray_2" icon="comments"/>            
+              </div>
+            )}
+          />
+          <Route path="/profile" component={Profile}/>
+          
         </div>
       </div>
     );
