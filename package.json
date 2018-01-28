@@ -4,7 +4,7 @@
   "description": "App dummy para practicar react",
   "main": "build/app.js",
   "scripts": {
-    "build": "webpack --colors",
+    "build": "webpack --colors && cp _redirects build/_redirects",
     "serve": "webpack-dev-server --content-base build --color --progress",
     "start": "npm run build && npm run serve"
   },
